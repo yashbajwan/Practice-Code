@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{width: 80%; margin: auto;}
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <h1>Hello JS</h1>
+        <!-- <img src="../images/204x147_computer.png" alt=""> -->
+        <button onclick="print() ">Print</button>      <!-- build in ftn -->
+        <button onclick="sayHi() ">Hi</button>      <!-- build in ftn -->
+        <button onclick="sayBye() ">Bye</button>      <!-- build in ftn -->
+            </div>
+
+    
+    <script>
+        "use strict"
+
+        // console.log(sayBye)
+        // sayHi()
+
+        //funtion declaration
+        function sayHi() {
+            var a="Hi There!";
+            // var a=prompt("Enter Something")
+            // console.log(a)
+            // document.write("<h1>hi there</h1>")
+            alert(a);
+            console.log(this)
+            return 4;
+        }
+
+        // function print() {
+        //     alert("print");
+        // }
+        
+        //funtion expression
+        var sayBye=function () {
+            alert("Bye Bye");
+        }
+
+        // console.log(goodBye)
+        var goodBye=()=>{alert("Good Bye") };
+
+        // goodBye();
+
+        function abcd() {
+            alert(this);
+        }
+
+        //funtion returns a funtion
+        function outer() {
+            var i="outer funtion";
+            function inner() {
+                var j="inner funtion";
+                return j;
+            }
+            return inner;
+        }
+
+        function getMean(a,b,c,d,e) {
+            return ((a+b+c+d+e)/5);
+        }
+
+        var s1=getMean(89,78,67,56,88);
+        var s2=getMean(79,69,72,68,63);
+        var s3=getMean(59,69,72,68,63);
+
+
+        function getRect(x,y) {
+            // return "Area is "+ (x*y) + " and Perimeter is "+ (2*(x+y));
+            return `Area is ${x*y} and perimeter is ${2*(x+y)}.`;
+        }
+
+        function areaCircle(r) {
+            return (3.14*r*r).toFixed(2) ;
+        }
+
+        function crcmCrcl(r) {
+            console.log(2*3.14*r);
+            console.log(crcmCrcl.name)
+            return (2*Math.PI*r).toFixed(2);
+        }
+
+        function user(){}
+        //property
+        user.name;
+        user.length;
+        user.age=20;
+        user.city="New Delhi";
+        // user.name="Yash";                //Cannot assign new property to reserved property of a ftn
+
+        //methods
+        user.getYear=function(x){
+            return 2020 - this.age;
+        }
+        user.getYear();                    //why we called this?
+
+
+(function(){
+    var sessionID=1234;
+    console.log("SeesionID: "+sessionID);
+ }())
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // document.body.onclick=function(){ alert(this)};                                 //body
+        // document.onclick=function(){ alert(this)};                                      //html
+        // document.querySelector("h1").onclick=function(){ alert(this)};                  //this always refers to current
+/* 
+
+        function mean() {
+            var x=2, y=3,z=4;
+            var t=x+y+z;
+            return false;
+        } */
+        // mean()
+        // var m=mean;     //mean funtion
+        // var n=mean();   //24
+        
+
+
+        // document.querySelector("h1").onclick=function abcd(){ alert(this ) }
+        // document.body.onclick=()=>{alert(this)};
+
+        // document.body.onclick=function(){
+        //     console.log(this);
+        //     alert(this)
+        // }
+
+        // document.body.onclick=()=>{console.log(this)}
+
+        // var x="100px";
+        // var t=parseInt(x)
+        // console.log(t*2+"px");
+    
+    </script>
+</body>
+</html>
