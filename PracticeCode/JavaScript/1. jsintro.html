@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello JS</title>
+
+    <style>
+        .wrap{width: 80%; margin: auto;}
+        noscript{font-size: 30px ; color: red; text-align: center; display: block;}
+    </style>
+</head>
+<script>
+    // document.body.onclick = function () { alert("not working") }
+</script>
+
+<body>
+    <div class="wrap">
+        <noscript>
+            Please enable javascript
+        </noscript>
+        <h1>Hello JS</h1>
+        <button onlick="print()">Print</button>
+        <a href="JavaScript:Void()" onclick="print()">Print</a>
+        /* <a href="#" onclick="print()">print</a> */
+    </div>
+
+    <script>
+        var x = 3;
+        var y = 4;
+        console.log(x + y);
+        console.log(x + y);
+        document.write("<br>"); 
+        console.log("Hello string")
+        console.error("Error found")
+        window.alert("first");
+        alert("second");
+        // console.clear();
+        document.write(x+y);
+        // document.body.onclick=function() { alert("Hello Yash")};
+        // var id=prompt("Enter userid");
+        // document.write(id+id);
+        // var p = confirm("Do you want to continue");
+        var a=prompt("enter something");
+        console.log(a);
+        var b=confirm("press either yes or no ")
+        console.log(b);
+    </script>
+</body>
+
+</html>
