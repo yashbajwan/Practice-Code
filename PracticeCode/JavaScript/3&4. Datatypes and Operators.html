@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Datatypes</title>
+    <style>
+        .wrap {
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Hello JS</h1>
+        <p></p>
+    </div>
+    <script>
+        "use strict";
+        var x = `abcd changed`;
+        var y = 20;
+        var u;
+        var t = true;
+        var f = false;
+        var n = null;
+
+        //[]    brackets
+        //{}    curly braces
+        //()    parenthesis
+        //==    check value
+        //===   check both value and data type
+
+        // var i=20+20+"20"+30*30;       //420 bcz of bodmas 
+
+        document.write(20+20+2);
+        document.write("<h2>",20*20+2,"<h2>");
+        document.write("<h2>"+(y+y)*y+6+"</h2>");
+        document.write("<h2>",(y+y)*y+6,"</h2>");
+
+            //task
+            // var s1=prompt("Enter s1");
+            // var s2=prompt("Enter s2");
+            var s1=20;
+            var s2=30;
+            var area=s1*s2;
+            var per=2*(s1+s2);
+
+            
+            console.log("area is", area ,"and perimeter is ",per);
+            console.log("area is    "+ area +"and perimeter is "+per);
+        document.write("<p>area is ", area ," and perimeter is ",per,"</p>");
+        // document.write("<p>area is "+ area +" and perimeter is "+per+"</p>");
+
+
+            var side=40;
+            document.write("<p>Area is ", side*side," and perimeter is ",4*side,"</p>");
+            document.write("<p>Area is ", (side*side),"m<sup>2</sup> and perimeter is ",(4*side),"m.</p>");
+
+        // console.log(2==2)
+        // console.log(2=="2")
+        // console.log(2==2.0)
+        // console.log(2=="002.00")
+
+
+        // console.log(2==2);
+        // console.log(2=="2");            //check value
+        // console.log(2==="2");           //check value and data type
+
+        // console.log(1==true);           
+        // console.log(1===true);
+        // console.log(0==falsse);
+        // console.log(0===false);
+
+        // console.log(undefined==null);
+        // console.log(undefined===null);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        // var month = ["jan", "feb", "mar", "apr"];        //array object(array of type object)
+        // var user = { name: "user", id:22 };               //object object
+        // var sayHi = function () { alert(x) };            //funtion
+        // var map = new Map();
+        // var day=month;
+
+        // var h1=document.querySelector("body");
+        // var age=prompt("Enter age");
+        // console.log(age );
+        // console.log(typeof x);                          //typeof working as an object
+        // console.log(typeof (x));                        //typeof working as a funtion
+    </script>
+</body>
+
+</html>
