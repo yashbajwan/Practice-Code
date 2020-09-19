@@ -1,0 +1,70 @@
+<!-- remove comments before pushig to github -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Ftn</title>
+    <style>
+        *{margin: 0;}
+        body{font-family: sans-serif;}
+        .container{width: 1200px; margin: auto;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript</h1>
+    </div>
+
+<script>
+    setTimeout(tata,1000,"Yash")
+    // console.log(sayHi("yash"))
+    // setTimeout(sayHi,2,"yash")            //agar phele funtion call kiya without giving any argument and then time diya and then argument diye TO HI YE WORK KAREGA properly and most important --> settime ftn mai humme sayHi k baad **()** nahi lagana hota bcz setTimeout ftn internally khud sayHi ko call kar raha hota hai <--
+    // setTimeout(sayHi("ashish"),2000);       //ye dhang se nahi chalega aur ''''HELLO ASHISH''' first line pe print hoga bcz parameters galat tarike se diye hue hai
+/*         function sayHi(x) {
+            console.log("Hello "+ x);
+        } */
+
+        // setTimeout(sayHi,2000)          //here callback ftn is sayHi bcz jaha ftn ki argument ftn ho that is called     a callback
+
+        /* function main(x) {
+            x();
+            // console.log("is this working",x())      //iscase mai jab tak interpreter line k end tak nahi pahunch jata jabtak console print nahi karega aur fhir jab end mai pahuchega to callback wale ftn ko call kar dega aur print statement of console ruk jayegi aur callback ki print statemnet phele print ho jayegi
+            console.log("second")
+            // return "55";     //ye sirf call karne wale ko milega console pe print nahi karega jab tak hum khud isse console pe call nahi karte
+        } */
+
+        /* function callback() {
+            console.log("First")
+         }*/
+
+        // main(callback);
+        // setTimeout(console.log(100),2000);          //working as syncronous even after giving time
+
+        /* console.log(1)
+        setTimeout(function(){console.log(2)})          //asyncronous
+        setTimeout(()=>{console.log(2.1)})
+        console.log(3); */
+
+        function classStarted(x,y,a,b,t) {
+            x(a); y(b);
+            console.log("Class Started at time",t);
+        }
+        function onProjector(mode) {
+            console.log("Projector On with mode",mode);
+        }
+        function takeAtten(x) {
+            console.log("Attendance Taken, Students Present",x);
+        }
+
+        classStarted(takeAtten,onProjector,2,"hdmi","10am")
+        
+        function tata(x) {
+            console.log("Bye Bye",x)
+        }
+        // setInterval(tata,1000)
+
+</script>
+</body>
+</html>
+<!-- <script>console.log("end") </script> -->
