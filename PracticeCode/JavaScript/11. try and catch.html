@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try and Catch</title>
+    <style>
+        .container {width: 1200px; margin: auto;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Try and Catch ftn in JS
+        </h1>
+    </div>
+
+    <script>
+        var num=5;
+
+        try {
+            if (num === undefined) { throw new Error("undefined") };     //=== bcz for exception null==undefined 
+            if (isNaN(num)) { throw new Error("not a number") };
+            // if (num == null) { throw ("null") }
+            if ( num==null) { throw new Error("Null not allowed")}
+            if (num===true || num==false){ throw new Error("boolean")};   //=== bcz for the exception 1==true
+        } catch (val) {
+            console.log(val);
+        }
+        finally{
+            console.log(num);
+        }
+
+
+    </script>
+</body>
+</html>
