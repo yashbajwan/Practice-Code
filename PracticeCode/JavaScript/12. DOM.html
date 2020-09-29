@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+        /* h1{font-size: 54px;} */
+        /* p{font: 20px sans-serif} */
+        body{font: 14px sans-serif;}
+        /* tbody{color: red;} */
+        yash{display:block; background: aqua;}
+    </style>
+</head>
+
+<body id="2" class="abc cde"> <div class="container">
+        <h1 title="this is title 1">JavaScript DOM</h1>
+        <!-- <script>document.write("after h1 and before p tag") </script> -->
+        <p id="para">Dom (stands for Document Object Model) is a built-in API(application programming interface) in Front-End JavaScript. DOM allow us to interact with user interface elements means using DOM we can interact with Front end elements example using DOM we can change the heading DOM to JS DOM
+    </p>
+    <button id="toggle">Hide</button><br>
+        <!-- <script> document.write("after p tag")</script> -->
+         <img onclick="reduceSize(this) "    src="../images/300x168_ultra instinct .jpg">
+        <img onclick="reduceSize(this) " src="../images/300x168_ultra instinct .jpg">
+        <form name="contact">     
+<!--             aslo can be access using document.formname ex. document.cont -->
+        <table>
+            <!-- <tr>
+                <td>td</td>
+                <td>td</td>
+                <td>td</td>
+                <td>td</td>
+                <td>td</td>
+            </tr> -->
+            <tr>
+                <td>
+                    <input type="text" name="username" value="asjfkj">
+                    <input type="password" name="userpass" value="aljdkj">
+                    <input type="checkbox">
+                </td>
+            </tr>
+        </table>
+    </form> 
+    <!-- <ol class="class2">
+        <li>th</li>
+        <li>afjkdj</li>
+        <li>kwjeijf</li>
+        <li>mvmvm,</li>
+    </ol>
+    <ul class="class2">
+        <li>askdj</li>
+        <li>ksjdkj</li>
+        <li>ksajfkj</li>
+        <li>ksjkajs</li>
+    </ul>
+    <p id="id1" class="even">Para 1</p>
+    <p id="id1" class="odd">Para 1</p>
+    <p id="id2" class="even">Para 3</p>
+    <p id="id2" class="odd">Para 4</p> -->
+<!--    <marquee>this marquee is obsolute </marquee>-->
+   
+       <button class="btn" onclick="toggleText()">Hide</button>
+       <span>This is a span</span>
+    </div>
+    <!-- OUTER HTML = ''''<p id="id2" class="odd">Para inout</p>'''' and Inner HTML = ''''Para inout'''' -->
+
+
+
+
+
+
+
+    <script>
+        // "use strict"
+        // setTimeout(function(){ document.querySelector("h1").innerHTML="JS DOM" },2000);     //document hit dom, queryselector hit dom k elements i.e. hi and inner html replace the h1 tag k andar ki value with ''JS DOM''
+        document.write("hello js dom");
+        // setTimeout(function(){document.write("clear all")},1000)
+        // document.title="hey "
+        var h1=document.querySelector("h1");
+        var text=h1.textContent;        //"JavaScript DOM"
+        var html=h1.innerHTML;          //"JavaScript <i>DOM</i>"
+        document.body.setAttribute("title","this is body");
+
+//        var m=document.createElement("marquee");
+//        m.innerHTML="this is a marque";
+//        document.querySelector(".container").appendChild(m);        //not a validation error
+
+
+        var y=document.createElement("yash");
+        y.innerHTML="Hi! Yash this side";
+        document.querySelector(".container").appendChild(y);
+
+
+/*         var uname=document.querySelector("[name=username] ");
+        var upass=document.querySelector("[name=userpass] ");
+
+        if(uname.value==""){
+            uname.style.border="1px solid red";
+            else{
+            uname.style.borde="1px solid green";}
+        } */
+
+        var uname=document.querySelector('[name="username"]')
+        var upass=document.querySelector('[name="userpass"]')
+
+        if (uname.value=="") {
+            uname.style.border="2px solid red";
+        }
+        else{
+            uname.style.border="2px solid green";
+        }
+
+        if(upass.value==""){
+            upass.style.border="2px solid red";
+        }
+        else{
+            upass.style.border="2px solid green";
+        }
+        
+        /*       var fs=getComputedStyle(h1).fontSize;
+        var ff=getComputedStyle(h1).fontFamily;
+        console.log(fs,ff);
+
+        function toggleText(){
+            var btn=document.querySelector(".btn");                 //button
+            var next=btn.nextElementSibling;                        //span
+            // var display=alert(getComputedStyle(btn).display);
+            var display=getComputedStyle(next).display;
+            // alert(display)
+            if(display=="inline"){
+                next.style.display="none";
+            }
+            else{
+                next.style.display="inline"
+            }
+        }
+ */
+
+
+
+        function toggleText(){
+            var btn=document.querySelector('.btn');
+            var next=btn.nextElementSibling;
+            var display=getComputedStyle(next).display;
+            if(display=="inline"){
+                next.style.display="none";
+                btn.innerHTML="Show";
+            }
+            else{
+                next.style.display="inline";
+                btn.innerHTML="Hide"
+            }
+        }
+
+/*         var x1=document.querySelector("h1");
+        var html=x1.innerHTML="Javascript <i>Dom</i>";             //it prints... ''''JavaScript DOM'''   
+        var text=x1.textContent="Javascript <i>Dom</i>";        //it prints... ''''Javascript <s>Dom</s>'''' */
+
+
+        function reduceSize(x){
+            // alert(x.width)
+            var w=getComputedStyle(x).width;            //gives value in px
+            w=parseInt(w)
+            x.style.width=w/2+"px";
+            // alert(w)
+        }
+
+        //function to toggle paragraph
+        document.querySelector('#toggle').onclick= function toggleBtn(){
+            var btn=document.getElementById('toggle');
+            var para=document.getElementById('para');        //even if we commnet this line we still be able to toggle paragraph bcz we assigned value to id which is unique throughout the page so it means even if we don't use getElement we still be able to use para without it as here para points to the global variable which is equal to the id we have assigned
+            if(para.style.display!='none')    {
+                para.style.display='none';
+                btn.textContent='show';
+            }
+            else{
+                para.style.display='block';
+                btn.textContent='hide';
+            }
+        }
+
+    </script>
+</body>
+
+</html> 
