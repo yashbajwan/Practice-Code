@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and clear</title>
+    <style>
+        *{margin: 0;}
+        .wrap{width: 800px; border: 10px solid green; margin: auto;}
+        .aside1{width: 200px;height: 200px; background: aqua;}
+        .section1{width: 600px;height: 200px; background: pink}
+        .aside2{width: 200px;height: 200px; background: aqua; float: left;}
+        .section2{width: 600px;height: 200px; background: pink; float: left;}
+        .clear{ clear: both;}
+        /* border: 1px solid ; border-width: 0px 1px 0px 0px;*/
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="aside1">Aside 1</div>
+        <div class="section1">Section 1</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, maiores. Laboriosam dicta cupiditate aut nam. Doloribus repellat, voluptate quo temporibus pariatur nihil corrupti, quisquam numquam repellendus illum, voluptatum quod asperiores!</p>
+    </div>
+    <br>
+    <div class="wrap">
+        <div class="aside2">Aside 1</div>
+        <div class="section2">Section 1</div>
+        <div class="clear"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, maiores. Laboriosam dicta cupiditate aut nam. Doloribus repellat, voluptate quo temporibus pariatur nihil corrupti, quisquam numquam repellendus illum, voluptatum quod asperiores!</p>
+    </div>
+    
+</body>
+</html>
