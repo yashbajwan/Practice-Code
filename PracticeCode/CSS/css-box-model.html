@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision 2</title>
+    <style>
+        /* by defualt div hava box-sizing=content-box and button have box-sizing=content-box */
+        *{ margin: 0; box-sizing: border-box;}
+        a{ text-decoration: none; }
+        body{font: 16px sans-serif; }
+        .wrap{width: 1200px; margin: auto; }
+        .header{background: #fcf ; padding: 10px; border: 2px solid #000;} 
+/*        .nav{background: #333; color: #fff; padding: 10px }  /* hyperlink donot inhert color from their parent  */
+        .nav{background: #333; padding: 10px }
+        .nav a{display: inline-block;  color: #fff; margin-right: 10px; padding: 15px; background: #999;}
+        /* a inline element hai so that's why padding will overflow */
+        /* if we change it to block then it will take full width of 1160px */
+        /* hence we use intermediate value i.e. inline block which won't let padding to overflow  */
+        /* .nav a:focus{border: solid;} */
+        /* outline is much better than border as it doesn't take space; margin pe kabhi click nahi hoga */
+        .main{   padding: 10px; background: #fcc;   }
+        .footer{ text-align: center; padding: 10px; background: #aff; }
+        /* .btn{width: 100px; height: 50px; background: aqua; border:  solid #000; padding: 20px; margin: auto;
+          display: block; 
+          color: #00f; cursor: pointer; border-color: red green orange lightblue;} */
+        /* margin auto only works on block level elements so we need to change inline-block to block in case of button, image */
+        /* defualt border color is font color*/
+        p{margin-top: 10px; background: yellow;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Brand</h1>
+        </div>
+        <div class="nav">
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <!-- <div class="btn">DIV</div>
+            <button class="btn">Button</button> -->
+        </div>
+        <div class="main">
+            <h2>Main</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia cum suscipit laborum voluptatem ipsum quod, quos necessitatibus commodi nostrum. Perferendis, tenetur sequi cupiditate praesentium aut aperiam assumenda a quae vero!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia cum suscipit laborum voluptatem ipsum quod, quos necessitatibus commodi nostrum. Perferendis, tenetur sequi cupiditate praesentium aut aperiam assumenda a quae vero!</p>
+        </div>
+        <div class="footer">
+        &copy;2020
+        </div>
+    </div>
+</body>
+</html>
