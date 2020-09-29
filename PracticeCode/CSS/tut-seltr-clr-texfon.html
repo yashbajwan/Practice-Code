@@ -1,0 +1,82 @@
+<!--  CSS Tutorial, CSS Selectors, CSS Colors, CSS Text Properties, CSS Font Properties -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style media="screen">
+        body {  width: 1200px; margin: auto; background: green;
+            font-family: Arial, Helvetica, sans-serif;}
+            .lead{color: orange;}
+            [disabled]{ cursor: not-allowed}
+            abbr[title]{cursor: help;}
+            button{color: #fff; background: rgb(196, 113, 125);}
+            button:hover{background: red; cursor: pointer;}
+            .container{background:transparent; text-align: center; letter-spacing: 1px;}
+            .container p{background: orange;}
+            a{text-align: center; text-decoration-style: dotted; text-decoration-line: line-through; color: #fff;font-size: 100%;}
+            .text-align{text-align: justify ;width: 800px; border: 1px solid; font-variant: small-caps ;}
+            #a{font-stretch: normal;}
+            #b{font-stretch: condensed;}
+            #c{font: small-caps bold italic 18px/1.4 Arial; }
+        #d{font-stretch: extra-condensed;font-family: Arial, Helvetica, sans-serif;}
+    </style>
+
+    <style media="screen and (max-width: 860px)">
+        body {
+            font-family: monospace;
+            background-color: aqua;
+        }
+    </style>
+
+    <style media="print">
+        body {
+            background-color: red !important;
+            font-family: cursive ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <h1>
+           CSS REVISION
+       </h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim corporis hic optio porro accusantium nobis provident modi totam facere corrupti, consequatur minus molestias quae veniam illo magni rerum illum sequi?</p>
+        <h2>hey</h2>
+        <a href="#">Link</a>
+        <p class="text-align">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique distinctio voluptate cupiditate eius voluptas magni praesentium. Ab, eos. Aspernatur, odio omnis? Ullam molestiae aut ea ipsam atque, iste non illum. Eligendi molestias, ctio reprehenderit praesentium! Molestiae sunt nihil recusandae! Minus consequuntur ex fugiat ipsa officia. Doloremque inventore veritatis expedita enim, alias, atque ipsa facere, architecto dolores nesciunt voluptatem mollitia nemo porro fuga! Voluptatibus repellat explicabo, aliquam tempore fugiat, nisi, excepturi iure magni sint debitis nam? Possimus totam nobis quibusdam aperiam cum quae deleniti. Impedit incidunt est voluptate eos, a animi eius alias iusto distinctio rerum, optio magnam exercitationem ipsum aut repellendus odit tenetur quis culpa ullam ipsam sit vitae provident ad perspiciatis? Totam vitae suscipit praesentium velit, labore perspiciatis? Tenetur aut sapiente mollitia laudantium ratione nulla blanditiis perspiciatis ipsa voluptatibus, voluptatem molestias a ea suscipit reprehenderit aspernatur distinctio excepturi quaerat quia deleniti consectetur. Numquam earum doloremque quidem fuga sequi quos provident at minus culpa eveniet praesentium quo quas porro amet distinctio dolor voluptate vel, sed, qui atque repudiandae sit necessitatibus. Ullam, corrupti unde?</p>
+        <p id="a">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eligendi, eos delectus illo, harum, quasi maiores nisi amet soluta eveniet repellat. Ratione explicabo adipisci asperiores animi excepturi accusantium quia at!</p>
+        <p id="b">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eligendi, eos delectus illo, harum, quasi maiores nisi amet soluta eveniet repellat. Ratione explicabo adipisci asperiores animi excepturi accusantium quia at!</p>
+        <p id="c">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eligendi, eos delectus illo, harum, quasi maiores nisi amet soluta eveniet repellat. Ratione explicabo adipisci asperiores animi excepturi accusantium quia at!</p>
+        <p id="d">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eligendi, eos delectus illo, harum, quasi maiores nisi amet soluta eveniet repellat. Ratione explicabo adipisci asperiores animi excepturi accusantium quia at!</p>
+        <p id="e">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eligendi, eos delectus illo, harum, quasi maiores nisi amet soluta eveniet repellat. Ratione explicabo adipisci asperiores animi excepturi accusantium quia at!</p>
+        <p id="f">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione eligendi, eos delectus illo, harum, quasi maiores nisi amet soluta eveniet repellat. Ratione explicabo adipisci asperiores animi excepturi accusantium quia at!</p>
+    </div>
+    <h2><abbr title="Hyper Text Markup Language">HTML</abbr> is markup language</h2>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repellendus, perspiciatis sit eius esse ea ratione dolorem, dicta aspernatur tenetur doloribus illum optio sint rem alias excepturi, recusandae officiis. Expedita?</p>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repellendus, perspiciatis sit eius esse ea ratione dolorem, dicta aspernatur tenetur doloribus illum optio sint rem alias excepturi, recusandae officiis. Expedita?</p>
+    <input type="text" disabled>
+    <button>Button</button>
+    
+  <p style="font-stretch:condensed"> Font stretch condensed </p>
+  
+  <p style="font-stretch:semicondensed"> Font stretch semi condensed </p>
+  
+  <p style="font-stretch:extra-condensed"> Font stretch extra condensed </p>
+  
+  <p style="font-stretch:ultra-condensed"> Font stretch ultra condensed </p>
+  
+  
+  <p style="font-stretch:expanded"> Font stretch expanded </p>
+  
+  <p style="font-stretch:semi-expanded"> Font stretch semi expanded </p>
+  
+  <p style="font-stretch:ultra-expanded"> Font stretch extra expanded </p>
+  
+  <p style="font-stretch:extra-expanded"> Font stretch ultra expanded </p>
+    </body>
+
+</html>
