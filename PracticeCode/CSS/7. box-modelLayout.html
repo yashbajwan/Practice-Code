@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT</title>
+    <style>
+        * { margin: 0; }
+        a { text-decoration: none;}
+        body { font: 16px sans-serif }
+
+        .wrap {  width: 1200px ; margin: 0 auto;
+         /* padding: 20px; */
+         border: 3px solid violet;
+         background: red; 
+         }
+
+        .header { background: #fcf; padding: 10px; 
+        /* border: 3px solid red;  */
+        }
+
+        .nav { background: #333; padding: 10px; }
+        .nav a{ color: #fff; 
+            /* background: #a0a;  */
+            margin-right: 10px;
+            padding: 15px;
+            /* display: block; */
+            display: inline-block;
+         }
+        .nav a:focus{ outline: solid;}
+        .main{ padding: 10px; background: #fcc;}
+        .footer{ padding: 10px; background: #aff; text-align:center;}
+
+        .btn{ 
+            /* display: block; */
+            border:dotted ; color: aqua;
+             margin: auto; height: 50px; width: 100px; background: red; padding: 10px; box-sizing: border-box; cursor: pointer;
+            }
+        p{ margin-top: 10px; 
+        /* background: yellow; */
+        }
+        img{display: block ; border: 1px solid #aaa; margin: auto;}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Brand</h1>
+            <div class="btn">DIV</div>
+            <button class="btn">Button</button>
+        </div>
+        <div class="nav">
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </div>
+        <div class="main">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam temporibus possimus, reiciendis ea
+                consequatur pariatur assumenda dicta blanditiis tenetur itaque quam repellendus dolorum ullam
+                reprehenderit illo? Sunt, similique non? Ullam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam temporibus possimus, reiciendis ea
+                consequatur pariatur assumenda dicta blanditiis tenetur itaque quam repellendus dolorum ullam
+                reprehenderit illo? Sunt, similique non? Ullam!</p>
+            <img src="../../gifs/dwnld.gif" alt="">
+        </div>
+        <div class="footer">
+            <p>&copy;2020</p>
+        </div>
+    </div>
+</body>
+
+</html>
