@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+    <style>
+        .container{width: 1200px; margin: auto;}
+        .box{width: 1200px; margin: auto; border: 1px solid black; padding: 10px;}
+        .para1{background-color: #faeaea;}
+        .para2{background-color: #e2e2e2;}
+    </style>
+</head>
+<body>
+   &paste
+    <div class="container">
+        <h1>JavaScript Events</h1>
+        <button>Say Hello</button>
+        <!-- <marquee onmouseover="stop()" onmouseout="start()" >This is a marquee which is an obsolute property of html</marquee> -->
+        <!-- <p>lorem345</p> -->
+        <img src="../images/270x270_firefox.png" alt="">
+        <input type="text" value="name">
+        <select>
+        <option selected disabled>--Choose City--</option>
+        <option>New Delhi</option>
+        <option>Mumbai</option>
+        <option>Kolkata</option>
+        <option>Chennai</option>
+    </select>
+    <select id="toggleDel" hidden>
+        <option selected disabled>--Where in Dehi--</option>
+        <option>East Delhi</option>
+        <option>South Delhi</option>
+        <option>West Delhi</option>
+        <option>North Delhi</option>
+    </select>
+    <select id="num">
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+    </select><span></span><br>
+    <span id="cursorX"></span>
+    <span id="cursorY"></span>
+    </div>  
+    
+    <div class="box">
+        <h2>Hover property using JavaScript</h2>
+        <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur asperiores, dignissimos porro illum quo velit perferendis, dolor voluptate sunt amet, magnam nisi consequuntur odit doloribus eveniet tempore voluptates iusto ut reprehenderit saepe distinctio. Id aspernatur, harum expedita perspiciatis minima possimus aliquam sint ducimus corrupti quibusdam dolor magni dolore quae dignissimos ea illo doloribus fugit, iste recusandae officiis. Iste tempore ea minus. Sint impedit, culpa quidem voluptatibus eum iure dicta nisi. Vero sed alias iste ea reiciendis dolore accusantium quis odit cum ducimus quibusdam nam officiis, quidem autem hic iusto debitis harum ipsa assumenda tempore odio! Quis expedita tenetur vero perferendis?</p>
+        <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur asperiores, dignissimos porro illum quo velit perferendis, dolor voluptate sunt amet, magnam nisi consequuntur odit doloribus eveniet tempore voluptates iusto ut reprehenderit saepe distinctio. Id aspernatur, harum expedita perspiciatis minima possimus aliquam sint ducimus corrupti quibusdam dolor magni dolore quae dignissimos ea illo doloribus fugit, iste recusandae officiis. Iste tempore ea minus. Sint impedit, culpa quidem voluptatibus eum iure dicta nisi. Vero sed alias iste ea reiciendis dolore accusantium quis odit cum ducimus quibusdam nam officiis, quidem autem hic iusto debitis harum ipsa assumenda tempore odio! Quis expedita tenetur vero perferendis?</p>
+        <!-- <p class="odd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur asperiores, dignissimos porro illum quo velit perferendis, dolor voluptate sunt amet, magnam nisi consequuntur odit doloribus eveniet tempore voluptates iusto ut reprehenderit saepe distinctio. Id aspernatur, harum expedita perspiciatis minima possimus aliquam sint ducimus corrupti quibusdam dolor magni dolore quae dignissimos ea illo doloribus fugit, iste recusandae officiis. Iste tempore ea minus. Sint impedit, culpa quidem voluptatibus eum iure dicta nisi. Vero sed alias iste ea reiciendis dolore accusantium quis odit cum ducimus quibusdam nam officiis, quidem autem hic iusto debitis harum ipsa assumenda tempore odio! Quis expedita tenetur vero perferendis?</p>
+        <p class="even">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur asperiores, dignissimos porro illum quo velit perferendis, dolor voluptate sunt amet, magnam nisi consequuntur odit doloribus eveniet tempore voluptates iusto ut reprehenderit saepe distinctio. Id aspernatur, harum expedita perspiciatis minima possimus aliquam sint ducimus corrupti quibusdam dolor magni dolore quae dignissimos ea illo doloribus fugit, iste recusandae officiis. Iste tempore ea minus. Sint impedit, culpa quidem voluptatibus eum iure dicta nisi. Vero sed alias iste ea reiciendis dolore accusantium quis odit cum ducimus quibusdam nam officiis, quidem autem hic iusto debitis harum ipsa assumenda tempore odio! Quis expedita tenetur vero perferendis?</p> -->
+        <textarea cols="30" rows="4" tabindex="1"></textarea>
+        <span></span>
+    </div>
+
+    <script>
+        "use strict"
+
+        function hello() {
+            alert()
+        }
+
+
+        // document.querySelector("button").onclick=hello()           //this hello funtion works on page load and blocks the whole code 
+
+        document.querySelector("button").onclick=function(){
+            alert("hello")
+        }
+        document.querySelector("button").onclick=function(){           //this function will overwrite hello alert
+            alert("hi");                                             
+        }
+
+        document.querySelector("img").onclick=function(){
+            alert(this.width);
+            
+            this.width=100;         //no need to give px unit
+        }
+
+//how to disable right click
+
+        window.oncontextmenu=function(e){           //here 'e' refers to object mouse event
+            // alert(e)
+            return false;                           //to stop defualt action of right click and its menu
+        }
+
+        document.querySelector('input').onfocus=function(){
+        this.value="";
+        }
+
+        document.querySelector('input').onblur=function(){
+            this.value="Nme";
+        }
+
+        document.querySelector('select').onchange=function(){
+            // alert(this.value);
+            if(this.value=="New Delhi"){
+                let x=document.getElementById("toggleDel");
+                // alert(x);
+                var display=getComputedStyle(x).display;
+                // alert(display);
+                x.style.display="inline-block";
+
+            }
+        }
+
+        document.querySelector("#num").onchange=function(){
+            this.nextElementSibling.innerHTML=this.value;
+        }
+
+        window.onmousemove=function(e){
+            // console.log(e.clientX,e.clientY)
+            document.querySelector('#cursorX').innerHTML=`x=${e.clientX}`;
+            document.querySelector('#cursorY').innerHTML=`y=${e.clientY}`;
+        }
+
+        var text=document.querySelector('h1').textContent;
+        document.querySelector('h1').onmousedown=function(){
+            this.textContent="mouse left key pressed"
+        }
+        
+        document.querySelector('h1').onmouseup=function(){
+            this.textContent="mouse left key released";
+            setTimeout(function(){document.querySelector('h1').textContent=text},2000)
+        }
+
+        // document.querySelector('div.box').onmouseover=function(){
+        //     this.style.backgroundColor="#ccc";
+        // }
+
+
+
+
+        document.querySelector('.para1').onmouseover=function(){
+            this.style.backgroundColor="lightgreen";}                       //working perfectly fine
+        document.querySelector('.para1').onmouseout=function(){
+            this.style.backgroundColor="#faeaea"}
+        
+        document.querySelector('.para2').onmouseover=function(){
+            this.style.backgroundColor="lightgreen";
+        }
+        document.querySelector('.para2').onmouseout=function(){
+            this.style.backgroundColor="#e2e2e2";    
+        }
+
+        function $(x){return document.querySelector(x); }
+
+        $('textarea').onkeyup=function(){
+            this.nextElementSibling.innerHTML=this.value;
+        }
+
+        window.onkeydown=function(e){
+            console.log(e.which);
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
