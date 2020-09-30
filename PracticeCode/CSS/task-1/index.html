@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and clear</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CSS Layout</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="" class="active">Active</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+            </ul>
+            <form action="">                   <!-- agar clear k baad form rakha to overflow karega form -->
+                <input type="text">
+                <button>Search</button>
+            </form>
+            <div class="clear"></div>
+            <!-- jiska parent non floating ho sirf uss case mai hi clear lagega -->
+        </div>
+        <!-- <div class="nav1">
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </div> -->
+        
+        <div class="content">
+            <div class="section">
+                <div class="main">
+                    <h2>Main Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur,adipisicing elit. Nulla officia</span>  aliquid, facilis expedita quae veniam molestiae placeat eius magnam ipsam minus maxime quibusdam aliquam sequi temporibus. Minus, eaque, sapiente velit exercitationem dolorem cupiditate excepturi aspernatur cum sit ipsum tempora dolore quis. Fuga distinctio, possimus praesentium esse rem expedita nihil quis tempora, voluptates sint aperiam eveniet dolor pariatur explicabo animi harum repellendus autem dicta. Odio cupiditate sed accusamus aperiam autem architecto doloribus libero maxime mollitia magni. Error modi sunt voluptatum, assumenda, debitis, voluptatibus tempora illum autem asperiores porro et iure explicabo accusantium! Sint omnis fugiat ipsam non sapiente expedita ducimus debitis ea suscipit.</p>
+                    <a href="">
+                        <span>&rarr;</span>
+                        <span>Read More</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cupiditate veniam quia error repellat deserunt eaque magnam doloremque optio. Animi quidem labore sunt voluptate praesentium, temporibus quos. Aut, molestiae praesentium.</p>
+                </div>
+                <div class="col">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cupiditate veniam quia error repellat deserunt eaque magnam doloremque optio. Animi quidem labore sunt voluptate praesentium, temporibus quos. Aut, molestiae praesentium.</p>
+                </div>
+                <div class="col">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cupiditate veniam quia error repellat deserunt eaque magnam doloremque optio. Animi quidem labore sunt voluptate praesentium, temporibus quos. Aut, molestiae praesentium.</p>
+                </div>
+                <div class="col">
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cupiditate veniam quia error repellat deserunt eaque magnam doloremque optio. Animi quidem labore sunt voluptate praesentium, temporibus quos. Aut, molestiae praesentium.</p>
+                </div>
+                <!-- we don't need to use clear bcz parent of col i.e. section is already a flooting element -->
+            </div>
+            <div class="aside">
+                <h2>Sidebar</h2>
+                <h3>Advertisemnt</h3>
+                <div class="ads"><h3>128x128</h3></div>
+                <div class="ads"><h3>128x128</h3></div>
+                <div class="ads"><h3>128x128</h3></div>
+                <div class="ads"><h3>128x128</h3></div>
+                <div class="ads"><h3>128x128</h3></div>
+                <div class="ads"><h3>128x128</h3></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer">
+            <span>&copy; 2020</span>
+        </div>
+    </div>
+</body>
+</html>
