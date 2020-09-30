@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Style</title>
+    <style>
+        *{margin: 0; box-sizing: border-box;}
+        a{text-decoration: none;}
+        ul{list-style: none; padding: 0px;}
+        img{vertical-align: bottom;}
+        body{font: 16px sans-serif;}
+        .container{width: 1200px; margin: auto; background: #ddd;}
+    
+        ul,ol{margin: 10px 0; 
+            /* padding: 0; */ /*if padding is 0 then only we require inside position otherwise keep it default i.e. outside*/
+        }
+        ul{ list-style: square outside; list-style-type: urdu; list-style: url(../../../images/20x20_star.png); }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>CSS Background</h1>
+    <ul class="olist">
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+    </ul>
+    <ol class="olist">
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+    </ol>
+   </div>
+</body>
+</html>
