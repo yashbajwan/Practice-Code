@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        *{margin: 0;box-sizing: border-box;}
+        a{text-decoration: none;}
+        img{vertical-align: bottom;}
+        ul{text-decoration: none;}
+        body{font: 16px sans-serif; }
+        .container{width: 1200px; margin: auto;background: #eee;}
+
+
+        .nav a:visited{background: red;}
+        .nav a:link{background: yellow;}
+
+        .nav a:focus{ outline: 2px solid blue}
+        /* :focus{ outline: 2px solid blue}    focus for all */
+        input:focus{outline: 3px solid yellow;}
+        .ulist li:hover{background: orange;}
+        .ulist li:active{background: red;}
+
+        .btn{border: 1px solid #000; padding: 6px 10px; background: #acbcf5 ;}
+        .btn:hover{cursor: pointer; background: #2e56f8; color: #fff;}
+        .btn:active{background: #2b3f8f; color: #fff; border-color: #fff;}
+        /* always use hover first and then active */
+        .btn:focus{outline: none;}
+
+        li:first-child{background: lightpink;}
+        /* h1:first-child{background: lightgreen;} */
+        p:first-line{background: lightgray;}
+        p::first-letter{font-size: 2em; font-weight: bolder;}
+        h1::before{content: "-"}
+        /* h1::after{content: ".";} */
+        h1::after{content: " yes, this is a line which you can't copy";}
+
+        blockquote{padding: 10px; border: 1px solid; margin: 10px;}
+        blockquote::before{content: "\1f4a1 Do you know"; font-size: 2em;}
+        .carat::before{
+            content: "";
+            border: 5px solid;
+            display: inline-block;
+            border-color: #000 transparent transparent;
+            margin:-3px 3px;
+        }
+
+        .wrap{width: 800px; }
+        /* .clear{clear: both;} */
+        .col1{width: 200px; height: 200px; background: aqua; float: left;}
+        .col2{width: 600px;height: 200px; background: pink; float: left;}
+        .wrap::after{content: ""; display: block; clear: both;}
+        /* .wrap{ width:800px;  border:1px solid}
+    .aside3{ width:200px; height:200px; background:aqua; float:left}
+    .section3{ width:600px; height:200px; background:pink; float:left} */
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>CSS Pseudoselectors</h1>
+    <!-- <h1>CSS Pseudoselectors</h1> -->
+    <div class="nav">
+        <a href="">link</a>
+        <a href="kjsakf">link</a>
+    </div>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <button class="btn">Button 1</button>
+    <button class="btn">Button 2</button>
+    <button class="btn">Button 3</button>
+    <button class="btn carat">Button 4</button>
+    <ul class="ulist">
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+    </ul>
+    <ol class="olist">
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+        <li>data</li>
+    </ol>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem in similique optio ad velit inventore nemo, amet nam aspernatur ab corrupti ess suscipit fugit perspiciatis. Incidunt ut suscipit maiores illo, aut error, fugiat nostrum nesciunt amet quae repellat, expedita officiis commodi optio id? Doloribus debitis esse quae necessitatibus aspernatur at possimus sint facilis iusto vel. Molestiae ipsum veniam vel voluptatum magnam sit quia pariatur harum voluptate!</p>
+    <blockquote>
+       <br> <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laboriosam mollitia in aperiam, impedit tempore laborum, quaerat excepturi nihil aliquam numquam! Ullam veniam a aliquid consectetur voluptatem repudiandae assumenda cumque!
+    </blockquote>
+    <!-- <blockquote>
+       <br> <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laboriosam mollitia in aperiam, impedit tempore laborum, quaerat excepturi nihil aliquam numquam! Ullam veniam a aliquid consectetur voluptatem repudiandae assumenda cumque!
+    </blockquote>
+    <blockquote>
+       <br> <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laboriosam mollitia in aperiam, impedit tempore laborum, quaerat excepturi nihil aliquam numquam! Ullam veniam a aliquid consectetur voluptatem repudiandae assumenda cumque!
+    </blockquote>
+    <blockquote>
+       <br> <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laboriosam mollitia in aperiam, impedit tempore laborum, quaerat excepturi nihil aliquam numquam! Ullam veniam a aliquid consectetur voluptatem repudiandae assumenda cumque!
+    </blockquote> -->
+    <div class="wrap">
+        <div class="col1">1</div>
+        <div class="col2">2</div>
+         <!-- <div class="clear"></div>      -->
+         <!-- <p>This Paragraph will wrap around Adjacent floating Divisions.</p>> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque sed, quibusdam odio ut reprehenderit molestiae pariatur repudiandae temporibus, consequatur voluptate molestias! Ducimus iste quam vel ipsum veniam nobis natus tenetur quo quasi? Recusandae, placeat provident? Voluptate nisi sint reprehenderit optio nam amet aperiam vel assumenda, sequi repellat, illo dicta doloribus dolor nemo quaerat voluptatum odit quasi veritatis itaque in eligendi cupiditate! Quasi repellat assumenda sit alias sunt non quis, iusto tenetur quam ab atque quod quo pariatur ducimus dolor! Exercitationem iste ab quidem voluptatibus dolorum! Voluptate quasi ad pariatur ducimus reiciendis error sunt rem. Quae temporibus delectus, deleniti, similique cumque sit mollitia modi rem nisi impedit, corporis aperiam neque voluptas obcaecati consequatur officia ipsa rerum! Recusandae vitae odio quam, excepturi veniam id soluta rerum maiores natus aliquid. Consequatur eum earum quasi sit et debitis sapiente culpa ut dicta, porro maxime nesciunt ducimus? Eos quam dolore voluptate minus eum excepturi fugit debitis recusandae. Sequi id adipisci autem qui, modi ex fugiat, ab amet tempore ducimus molestiae quaerat vero, debitis exercitationem rem aut provident obcaecati maxime vel! Veritatis molestiae aliquid ipsa praesentium ab maxime accusantium impedit sapiente. Quos eos, enim eius recusandae repudiandae sapiente ut itaque ea harum veritatis vitae quod?</p>
+</div>
+<!-- <div class="wrap">
+	<div class="aside3">Aside floating left</div>
+	<div class="section3">Section floating left</div>
+	<p>This Paragraph will wrap around Adjacent floating Divisions.</p>>
+</div> -->
+</div>
+</body>
+</html>
