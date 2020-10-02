@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 col</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 18px sans-serif;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background: #58585a;
+            color: #fff;
+        }
+
+        .header h2 {
+            padding: 35px;
+        }
+
+        .content {
+            width: 100%;
+            height: 400px;
+            color: #fff;
+        }
+
+        .section-corner {
+            width: 25%;
+            height: 100%;
+            background: #c1c1fd;
+            float: left;
+        }
+
+        .section-corner h2 {
+            padding-top: 150px;
+        }
+
+        .section-mid {
+            width: 50%;
+            height: 100%;
+            background: #fdc1e7;
+            float: left;
+        }
+
+        .section-mid h2 {
+            padding-top: 150px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 100px;
+            background: #afafaf;
+            color: #333;
+        }
+
+        .footer h2 {
+            padding: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Header(1200)</h2>
+        </div>
+        <div class="content">
+            <div class="section-corner">
+                <h2>Aside(300)</h2>
+            </div>
+            <div class="section-mid">
+                <h2>Section(600)</h2>
+            </div>
+            <div class="section-corner">
+                <h2>Section(300)</h2>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer">
+            <h2>Footer(1200)</h2>
+        </div>
+    </div>
+</body>
+
+</html>
